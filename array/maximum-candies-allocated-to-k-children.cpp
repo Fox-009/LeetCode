@@ -9,9 +9,8 @@ public:
     }
     int maximumCandies(vector<int>& candies, long long k) {
         long long sun = 0;
-        for(int it : candies){
-            sun+=it;
-        }
+        int n = candies.size();
+        for(int i = 0 ; i<n;i++) sun+=candies[i];
         int m = sun/k;
         if (!m) return 0;
         int low = 1;
