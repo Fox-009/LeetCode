@@ -12,7 +12,8 @@ public:
         for(int it : candies){
             sun+=it;
         }
-        if (sun<k) return 0;
+        int m = sum/k;
+        if (!m) return 0;
         int low = 1;
         int high = *max_element(candies.begin(),candies.end());
         while(low<= high){
