@@ -8,7 +8,11 @@ public:
         return total;
     }
     int maximumCandies(vector<int>& candies, long long k) {
-        if (k>candies.size()) return 0;
+        int sun = 0;
+        for(int it : candies){
+            sun+=it;
+        }
+        if (sun<k) return 0;
         int low = 1;
         int high = *max_element(candies.begin(),candies.end());
         while(low<= high){
