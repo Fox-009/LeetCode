@@ -8,7 +8,7 @@ public:
         return total;
     }
     int maximumCandies(vector<int>& candies, long long k) {
-        long long long sun = 0;
+        long long sun = 0;
         for(int it : candies){
             sun+=it;
         }
