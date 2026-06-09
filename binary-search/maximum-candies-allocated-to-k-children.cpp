@@ -12,7 +12,7 @@ public:
         for(int it : candies){
             sun+=it;
         }
-        int m = sum/k;
+        int m = sun/k;
         if (!m) return 0;
         int low = 1;
         int high = *max_element(candies.begin(),candies.end());
