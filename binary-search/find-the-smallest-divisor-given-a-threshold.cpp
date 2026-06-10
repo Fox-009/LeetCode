@@ -4,12 +4,13 @@ public:
         long long cnt = 0;
         for( int it : nums){
             cnt += (it+mid-1)/mid;
+            if (cnt>threshold ) return false;
         }
         if (cnt <= threshold) return true;
         else return false;
     }
     int smallestDivisor(vector<int>& nums, long long threshold) {
-        int low = 0;
+        int low = 1;
         int high = *max_element(nums.begin(),nums.end());
         while(low <= high){
             long long mid = low + (high - low)/2;
