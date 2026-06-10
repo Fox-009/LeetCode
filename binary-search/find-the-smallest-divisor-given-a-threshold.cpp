@@ -1,13 +1,13 @@
 class Solution {
 public:
-    bool possible(vector<int>&nums,long long mid,long long threshold){
-        long long cnt = 0;
-        for( int it : nums){
-            cnt += (it+mid-1)/mid;
-            if (cnt>threshold ) return false;
+    bool possible(vector<int>& nums, int mid, int threshold) {
+    long long cnt = 0;
+    for (int x : nums) {
+        cnt += (x + mid - 1) / mid;
+        if (cnt > threshold)
+            return false;
         }
-        if (cnt <= threshold) return true;
-        else return false;
+        return true;
     }
     int smallestDivisor(vector<int>& nums, long long threshold) {
         int low = 1;
