@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool possible(vector<int>&nums,int mid,int threshold){
-        int cnt = 0;
+        long long cnt = 0;
         for( int it : nums){
             cnt += (it+mid-1)/mid;
         }
