@@ -1,17 +1,14 @@
 class Solution {
 public:
     vector<int> plusOne(vector<int>& digits) {
-        int n = 0;
-        for(int i = 0; i<digits.size();i++){
-            n = n*10 + digits[i];
+        for(int i = digits.size()-1 ;i>=0;i--){
+            if(digits[i] < 9 ){
+                digits[i]++;
+                return digits;
+            }
+            digits[i] = 0;
         }
-        n = n +1;
-        vector<int>ans;
-        while(n>=0){
-            long long x = n%10;
-            ans.insert(ans.begin(),x);
-            n = n/10;
-        }
-        return ans;
+        digits.insert(digits.begin(),1);
+        return digits;
     }
 };
