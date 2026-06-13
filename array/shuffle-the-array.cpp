@@ -11,7 +11,6 @@ public:
         }
         int i  = 0;
         int j = 0;
-        int k = 0;
         vector<int>v1;
         while (i<x.size() && j< y.size()){
             v1.push_back(x[i]);
