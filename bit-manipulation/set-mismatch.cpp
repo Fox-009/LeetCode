@@ -14,7 +14,6 @@ public:
             }
             if (mpp[i] == 0){
                 missing = i;
-                break;
             }
         }
         return {duplicate,missing};
