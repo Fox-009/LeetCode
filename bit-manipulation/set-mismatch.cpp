@@ -16,6 +16,7 @@ public:
         for(int i = 0; i<nums.size();i++){
             if (nums[i] != i+1){
                 v1.push_back(i+1);
+                break;
             }
         }
         return v1;
