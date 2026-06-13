@@ -9,12 +9,14 @@ public:
         }
         int duplicate ;
         for(int i = 1; i<=nums.size();i++){
-            if (mpp[i] == 2){
-                v1.push_back(i);
-            }
             if (mpp[i] == 0){
                 v1.push_back(i);
             }
+            
+            if (mpp[i] == 2){
+                v1.push_back(i);
+            }
+            
         }
         return v1;
     }
