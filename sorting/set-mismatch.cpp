@@ -8,15 +8,12 @@ public:
             mpp[nums[i]]++;
         }
         int duplicate ;
-        for(auto it : mpp){
-            if (it.second == 2){
-                v1.push_back(it.first);
+        for(int i = 1; i<=nums.size();i++){
+            if (mpp[i] == 2){
+                v1.push_back(i);
             }
-        }
-        for(int i = 0; i<nums.size();i++){
-            if (nums[i] != i+1){
-                v1.push_back(i+1);
-                break;
+            if (mpp[i] == 0){
+                v1.push_back(i);
             }
         }
         return v1;
