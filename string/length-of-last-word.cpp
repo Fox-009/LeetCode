@@ -1,11 +1,15 @@
 class Solution {
 public:
     int lengthOfLastWord(string s) {
-        string word, last;
-        stringstream ss(s);
-        while (ss >>word){
-            last = word;
+        int length = 0;
+        for(int i = s.size() - 1; i>= 0; i--){
+            if(s[i] != ' '){
+                length++;
+            }
+            if(length && s[i] == ' '){
+                break;
+            }
         }
-        return last.size();
+        return length;
     }
 };
