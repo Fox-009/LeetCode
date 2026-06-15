@@ -7,11 +7,11 @@ public:
         }
         else{
             s = x;
-        }
-        if (x>INT_MAX) return 0;
-        long r  = 0 ;
+        };
+        int r  = 0 ;
         while(s>0){
             r = r*10 + s%10;
+            if (r>INT_MAX) return 0;
             s= s/10;
         }
         if (x<0){
