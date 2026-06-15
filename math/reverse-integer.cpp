@@ -8,7 +8,7 @@ public:
         else{
             s = x;
         }
-        int r  = 0 ;
+        long long r  = 0 ;
         while(s>0){
             r = r*10 + s%10;
             s= s/10;
