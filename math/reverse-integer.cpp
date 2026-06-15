@@ -12,7 +12,8 @@ public:
         while(s>0){
             int digit = s%10;
             r = r*10 + digit;
-            if (r>INT_MAX) return 0;
+            if(r > (INT_MAX - digit)/10)
+                return 0;
             s= s/10;
         }
         if (x<0){
