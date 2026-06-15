@@ -8,7 +8,8 @@ public:
         else{
             s = x;
         }
-        long long r  = 0 ;
+        if (x>INT_MAX) return 0;
+        long r  = 0 ;
         while(s>0){
             r = r*10 + s%10;
             s= s/10;
