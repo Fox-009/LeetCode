@@ -2,6 +2,7 @@ class Solution {
 public:
     int reverse(int x) {
         int s;
+        if (x == INT_MIN) return INT_MIN;
         if (x<0){
             s = -x;
         }
@@ -11,8 +12,8 @@ public:
         int r  = 0 ;
         while(s>0){
             int digit = s%10;
-            r = r*10 + digit;
-            if(r > (INT_MAX - digit)/10)
+            r = r*10+digit;
+            if(r > (INT_MAX-digit)/10)
                 return 0;
             s= s/10;
         }
