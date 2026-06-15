@@ -10,7 +10,7 @@ public:
         };
         int r  = 0 ;
         while(s>0){
-            int digit = s%10
+            int digit = s%10;
             r = r*10 + digit;
             if (r>INT_MAX) return 0;
             s= s/10;
