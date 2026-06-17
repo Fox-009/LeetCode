@@ -6,6 +6,7 @@ public:
         for(auto x : nums){
             if (count == 0){
                 candidate = x;
+                count = 1;
             }
             else if(x == candidate){
                 count++;
