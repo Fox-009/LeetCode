@@ -7,7 +7,10 @@ public:
         while (low <= high){
             int mid = low + (high - low)/2;
 
-            if (nums[low] < nums[high]) return min(target,nums[low]);
+            if (nums[low] < nums[high]) {
+                return min(target,nums[low]);
+                break;
+            }
             else if (nums[low] <= nums[mid]){
                 target = min(target,nums[low]);
                 low = mid + 1;
