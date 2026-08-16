@@ -6,13 +6,14 @@ public:
         int target = INT_MAX;
         while (low <= high){
             int mid = low + (high - low)/2;
+
             if (nums[low] < nums[high]) return nums[low];
             else if (nums[low] <= nums[mid]){
                 target = min(target,nums[low]);
                 low = mid + 1;
             }
             else{
-                if (nums[mid] < nums[high]){
+                if (nums[mid] <= nums[high]){
                     target = min(target, nums[mid]);
                     high = mid-1;
                 }
