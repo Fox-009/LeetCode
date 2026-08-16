@@ -13,10 +13,8 @@ public:
                 low = mid + 1;
             }
             else{
-                if (nums[mid] <= nums[high]){
-                    target = min(target, nums[mid]);
-                    high = mid-1;
-                }
+                target = min(target, nums[mid]);
+                high = mid - 1;
             }
         }
         return target;
