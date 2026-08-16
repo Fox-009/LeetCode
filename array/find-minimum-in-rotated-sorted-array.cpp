@@ -8,9 +8,9 @@ public:
             int mid = low + (high - low)/2;
 
             if (nums[low] < nums[high]) return nums[low];
-            else if (nums[low] <= nums[mid]){
-                target = min(target,nums[low]);
-                low = mid + 1;
+            else if (nums[low] < nums[high]) {
+                target = min(target, nums[low]);
+                break;
             }
             else{
                 target = min(target, nums[mid]);
